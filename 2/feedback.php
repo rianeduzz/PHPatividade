@@ -5,42 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Feedback</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            height: 100vh;
-        }
-
-        body {
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
     margin: auto;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     overflow: auto;
-    background: linear-gradient(315deg, #d3d3d3 3%, #c8a2c8 38%, #4b0082 68%);
+    background: linear-gradient(315deg, #262b4c 0%, #4a4f70 33%, #a7a9be 66%, #ffffff 100%);
     animation: gradient 15s ease infinite;
     background-size: 400% 400%;
     background-attachment: fixed;
 }
 
 @keyframes gradient {
-    0% {
-        background-position: 0% 0%;
-    }
-    50% {
-        background-position: 100% 100%;
-    }
-    100% {
-        background-position: 0% 0%;
-    }
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
 }
 
 .wave {
-    background: rgb(255 255 255 / 25%);
+    background: rgba(255, 255, 255, 0.25);
     border-radius: 1000% 1000% 0 0;
     position: fixed;
     width: 200%;
@@ -66,61 +51,51 @@
 }
 
 @keyframes wave {
-    2% {
-        transform: translateX(1);
-    }
-
-    25% {
-        transform: translateX(-25%);
-    }
-
-    50% {
-        transform: translateX(-50%);
-    }
-
-    75% {
-        transform: translateX(-25%);
-    }
-
-    100% {
-        transform: translateX(1);
-    }
+    2% { transform: translateX(1); }
+    25% { transform: translateX(-25%); }
+    50% { transform: translateX(-50%); }
+    75% { transform: translateX(-25%); }
+    100% { transform: translateX(1); }
 }
 
         .navbar {
-    background-color:  #371f60;
-    padding: 20px;
-    width: 100%;
-}
+            background-color: #262b4c;
+            padding: 20px;
+            width: 200px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
 
-.navbar .container {
-    max-width: 500px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-}
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px; 
-}
+        .nav-links a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 18px;
+            text-align: center;
+            width: 100%;
+        }
 
-.nav-links li {
-    margin: 0;
-}
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
 
-.nav-links a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.nav-links a:hover {
-    text-decoration: underline;
-}
         .container {
-            background-color: #371f60;
+            margin-left: 600px;
+            background-color: #262b4c;
             padding: 20px;
             border-radius: 10px;
             width: 90%;
@@ -143,51 +118,45 @@
             display: block;
         }
 
-        .container input[type="text"], .container textarea, .container select {
+        .container input[type="text"],
+        .container textarea,
+        .container select {
             width: 96%;
             padding: 10px;
             margin-bottom: 15px;
             border-radius: 5px;
             border: none;
             outline: none;
-            background-color: #ecf0f1;
+            background-color: #ffffff;
         }
 
         .container textarea {
             resize: vertical;
             height: 100px;
-            width: 96%;
         }
 
         .container button {
             width: 100%;
             padding: 10px;
-            background-color: #3c1095;
+            background-color: #104995;
             border: none;
             border-radius: 5px;
             color: white;
             font-size: 16px;
             cursor: pointer;
         }
-
-        .container button:hover {
-            background-color: #16a085;
-        }
     </style>
 </head>
 <body>
 
 <nav class="navbar">
-    <div class="container">
-        <ul class="nav-links">
-            <li><a href="../inicio/inicio.php">Início</a></li>
-            <li><a href='../1/form.php'>Cadastro</a></li>
-            <li><a href='../2/feedback.php'>Produto</a></li>
-            <li><a href='../reserva/reserva.php'>Reserva</a></li>
-        </ul>
-    </div>
+    <ul class="nav-links">
+        <li><a href="../inicio/inicio.php">Início</a></li>
+        <li><a href='../1/form.php'>Cadastro</a></li>
+        <li><a href='../2/feedback.php'>Produto</a></li>
+        <li><a href='../reserva/reserva.php'>Reserva</a></li>
+    </ul>
 </nav>
-
 
 <div class="container">
     <h2>Feedback de Produto</h2>

@@ -5,84 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <style>
-        body {
-            background-color: #2c3e50;
-            color: #ecf0f1;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .form-container {
-            background-color:#2a1b47;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            width: 300px;
-        }
-        h2 {
-            text-align: center;
-        }
-        label {
-            display: block;
-            margin-top: 10px;
-        }
-        input[type="text"], input[type="email"], input[type="tel"] {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            margin-bottom: 15px;
-            border: none;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        input[type="submit"] {
-            background-color: #473fa5;
-            color: white;
-            border: none;
-            padding: 10px;
-            width: 100%;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        input[type="submit"]:hover {
-            background-color: #473fa5;
-        }
-       
-
-        body {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-}
-
-body {
     margin: auto;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     overflow: auto;
-    background: linear-gradient(315deg, #d3d3d3 3%, #c8a2c8 38%, #4b0082 68%);
+    background: linear-gradient(315deg, #262b4c 0%, #4a4f70 33%, #a7a9be 66%, #ffffff 100%);
     animation: gradient 15s ease infinite;
     background-size: 400% 400%;
     background-attachment: fixed;
 }
 
 @keyframes gradient {
-    0% {
-        background-position: 0% 0%;
-    }
-    50% {
-        background-position: 100% 100%;
-    }
-    100% {
-        background-position: 0% 0%;
-    }
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
 }
 
 .wave {
-    background: rgb(255 255 255 / 25%);
+    background: rgba(255, 255, 255, 0.25);
     border-radius: 1000% 1000% 0 0;
     position: fixed;
     width: 200%;
@@ -108,213 +51,88 @@ body {
 }
 
 @keyframes wave {
-    2% {
-        transform: translateX(1);
-    }
-
-    25% {
-        transform: translateX(-25%);
-    }
-
-    50% {
-        transform: translateX(-50%);
-    }
-
-    75% {
-        transform: translateX(-25%);
-    }
-
-    100% {
-        transform: translateX(1);
-    }
+    2% { transform: translateX(1); }
+    25% { transform: translateX(-25%); }
+    50% { transform: translateX(-50%); }
+    75% { transform: translateX(-25%); }
+    100% { transform: translateX(1); }
 }
 
 
-.navbar {
-    background-color:  #34495e;
-    padding: 20px;
-}
-
-.navbar .container {
-    max-width: 500px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px; 
-}
-
-.nav-links li {
-    margin: 0;
-}
-
-.nav-links a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.nav-links a:hover {
-    text-decoration: underline;
-}
-
-.container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #34495e;
-    border-radius: 8px;
-    text-align: left; 
-}
-
-h2 {
-    text-align: center;
-    color: #ffffff;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-top: 15px;
-    color: #ffffff;
-}
-
-input[type="text"],
-input[type="date"],
-input[type="time"] {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-input[type="submit"] {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #218838;
-}
-
-@media (max-width: 600px) {
-    .container {
-        width: 90%;
-    }
-
-    .navbar .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-.navbar {
-    background-color:  #371f60;
-    padding: 20px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.navbar .container {
-    max-width: 500px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px; 
-}
-
-.nav-links li {
-    margin: 0;
-}
-
-.nav-links a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.nav-links a:hover {
-    text-decoration: underline;
-}
-        .container {
-            background-color: #371f60;
+        .navbar {
+            background-color: #262b4c;
             padding: 20px;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 500px;
-            margin-top: 100px;
-            z-index: 2;
-            position: relative;
+            width: 200px; 
+            height: 100vh; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
         }
 
-        .container h2 {
-            color: #ecf0f1;
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 18px;
             text-align: center;
-            margin-bottom: 20px;
+            width: 100%;
         }
 
-        .container label {
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .form-container {
+            margin-left: 650px;
+            background-color: #262b4c;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 350px;
+            margin-top: 100px;
+        }
+
+        h2 {
+            text-align: center;
             color: #ecf0f1;
-            font-size: 14px;
-            margin-bottom: 5px;
-            display: block;
         }
 
-        .container input[type="text"], .container textarea, .container select {
-            width: 96%;
-            padding: 10px;
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #ffffff;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"] {
+            width: 334px;
+            padding: 8px;
+            margin-top: 5px;
             margin-bottom: 15px;
-            border-radius: 5px;
             border: none;
-            outline: none;
+            border-radius: 4px;
             background-color: #ecf0f1;
         }
 
-        .container textarea {
-            resize: vertical;
-            height: 100px;
-            width: 96%;
-        }
-
-        .container button {
-            width: 100%;
-            padding: 10px;
-            background-color: #3c1095;
-            border: none;
-            border-radius: 5px;
+        input[type="submit"] {
+            background-color: #104995;
             color: white;
-            font-size: 16px;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 4px;
             cursor: pointer;
-        }
-
-        .container button:hover {
-            background-color: #16a085;
         }
 
     </style>
@@ -328,6 +146,7 @@ input[type="submit"]:hover {
         <li><a href="../reserva/reserva.php">Reserva</a></li>
     </ul>
 </nav>
+
 <div class="form-container">
     <h2>Cadastro de Cliente</h2>
     <form action="cadastrar.php" method="POST">

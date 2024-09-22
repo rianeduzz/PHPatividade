@@ -5,81 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
-            margin: auto;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-            overflow: auto;
-            background: linear-gradient(315deg, #d3d3d3 3%, #c8a2c8 38%, #4b0082 68%);
-            animation: gradient 15s ease infinite;
-            background-size: 400% 400%;
-            background-attachment: fixed;
-        }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    margin: auto;
+    overflow: auto;
+    background: linear-gradient(315deg, #262b4c 0%, #4a4f70 33%, #a7a9be 66%, #ffffff 100%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
 
-        @keyframes gradient {
-            0% {
-                background-position: 0% 0%;
-            }
-            50% {
-                background-position: 100% 100%;
-            }
-            100% {
-                background-position: 0% 0%;
-            }
-        }
+@keyframes gradient {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
 
-        .wave {
-            background: rgb(255 255 255 / 25%);
-            border-radius: 1000% 1000% 0 0;
-            position: fixed;
-            width: 200%;
-            height: 12em;
-            animation: wave 10s -3s linear infinite;
-            transform: translate3d(0, 0, 0);
-            opacity: 0.8;
-            bottom: 0;
-            left: 0;
-            z-index: -1;
-        }
+.wave {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% { transform: translateX(1); }
+    25% { transform: translateX(-25%); }
+    50% { transform: translateX(-50%); }
+    75% { transform: translateX(-25%); }
+    100% { transform: translateX(1); }
+}
 
         .navbar {
-            background-color: #371f60;
+            background-color: #262b4c;
             padding: 20px;
-            width: 100%;
+            width: 200px;
+            height: 100vh;
             position: fixed;
             top: 0;
             left: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
         }
 
         .nav-links {
             list-style: none;
+            padding: 0;
+            margin-top: 50px;
             display: flex;
-            gap: 30px; 
+            flex-direction: column;
+            gap: 20px;
         }
 
         .nav-links a {
             color: rgb(255, 255, 255);
             text-decoration: none;
             font-size: 18px;
+            text-align: center;
+            width: 100%;
         }
 
         .nav-links a:hover {
             text-decoration: underline;
         }
 
+        .image-box {
+            margin-left: 500px;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #262b4c;
+            border-radius: 8px;
+            margin-top: 220px;
+        }
+
         h1 {
             text-align: center;
             color: #ffffff;
-            margin-top: 80px; /* Ajustado para o espaço após o navbar */
-        }
-
-        .image-box {
-            max-width: 800px; /* Largura máxima da box */
-            margin: 20px auto; /* Centraliza e adiciona margem */
-            padding: 20px;
-            background-color: #371f60; /* Cor igual à da navbar */
-            border-radius: 8px;
+            height: 50px;
         }
 
         .image-container {
@@ -94,11 +120,11 @@
         }
 
         .image-item img {
-            width: 150px; /* Ajuste a largura */
-            height: 150px; /* Ajuste a altura */
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             border: 2px solid white;
-            object-fit: cover; /* Impede o estiramento da imagem */
+            object-fit: cover;
         }
 
         .image-item p {
@@ -113,10 +139,11 @@
             }
 
             .image-item img {
-                width: 120px; /* Ajusta o tamanho da imagem no mobile */
+                width: 120px;
                 height: 120px;
             }
         }
+
     </style>
 </head>
 <body>
@@ -130,9 +157,8 @@
     </ul>
 </nav>
 
-<h1>Integrantes</h1>
-
 <div class="image-box">
+    <h1>Integrantes</h1>
     <div class="image-container">
         <div class="image-item">
             <img src="../imagens/DSCN3138.JPG" alt="Integrante 1">
