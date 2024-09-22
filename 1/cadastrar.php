@@ -131,7 +131,6 @@ body {
         <li><a href='../reserva/reserva.php'>Reserva</a></li>
     </ul>
 </nav>
-
 <div class="result-container">
     <h2>Dados do Cliente</h2>
     <ul>
